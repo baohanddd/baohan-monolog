@@ -14,30 +14,6 @@ class AppLogger
      * @param array $extra
      * @return Logger
      */
-    public static function getInstance(string $name, array $extra): Logger
-    {
-        $log = new Logger($name);
-//        $log->pushHandler(new BearychatHandler(
-//            'https://hook.bearychat.com/=bwBVl/incoming/',
-//            '1383d56537283b18ec1d21cf6d5730ec',
-//            Logger::CRITICAL));
-//        $log->pushHandler(new StreamHandler('/data/logs/fu_cli_debug.log', Logger::DEBUG));
-//        $log->pushHandler(new StreamHandler('/data/logs/fu_cli_error.log', Logger::ERROR));
-//        $handler = new StreamHandler('php://stdout', Logger::DEBUG);
-//        $handler->setFormatter(new ColoredLineFormatter());
-//        $log->pushHandler($handler);
-//        $log->pushProcessor(function ($record) use ($extra) {
-//            $record['extra'] = $extra;
-//            return $record;
-//        });
-        return $log;
-    }
-
-    /**
-     * @param string $name
-     * @param array $extra
-     * @return Logger
-     */
     public static function getLogger(string $name, array $extra): Logger
     {
         $log = new Logger($name);
