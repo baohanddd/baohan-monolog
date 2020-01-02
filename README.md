@@ -6,7 +6,7 @@ Monolog is a powerful logger, but need some configures before to use for each pr
 ### Installation
 
 ```
-$ composer require "baohan/monolog: ~1.*"
+$ composer require "baohan/monolog: 1.*"
 ```
 
 ### Example
@@ -26,8 +26,6 @@ $log = AppLogger::getLogger('demo', $extra);
 $log->pushHandler(AppLogger::getConsoleHandler(Logger::DEBUG));
 $log->pushHandler(AppLogger::getStreamHandler('debug.log', Logger::DEBUG));
 $log->pushHandler(AppLogger::getBearychatHandler('YOUR_API_KEY', Logger::CRITICAL));
-
-
 $log->pushHandler(AppLogger::getStreamHandler('error.log', Logger::ERROR));
 
 $context = [
