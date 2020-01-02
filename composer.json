@@ -1,0 +1,27 @@
+{
+    "name": "baohan/monolog",
+    "description": "A configured monolog for out-of-box",
+    "require": {
+        "php": "^7.3",
+        "monolog/monolog": "*",
+        "gmponos/guzzle_logger": "^1.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "ext-json": "*",
+        "bramus/monolog-colored-line-formatter": "^3.0"
+    },
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+        "name": "baohan",
+        "email": "baohanddd@gmail.com",
+        "homepage": "https://twitter.com/baohanddd"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Baohan\\Monolog\\": "src/"
+        }
+    }
+}
+
