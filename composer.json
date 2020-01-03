@@ -10,7 +10,7 @@
         "bramus/monolog-colored-line-formatter": "^3.0"
     },
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "authors": [
         {
         "name": "baohan",
