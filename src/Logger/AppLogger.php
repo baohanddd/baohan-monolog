@@ -17,11 +17,22 @@ class AppLogger
     public static function getLogger(string $name, array $extra): Logger
     {
         $log = new Logger($name);
+        if ($extra) {
+            static::setExtra($log, $extra);
+        }
+        return $log;
+    }
+
+    /**
+     * @param Logger $log
+     * @param array $extra
+     */
+    public static function setExtra(Logger $log, array $extra): void
+    {
         $log->pushProcessor(function ($record) use ($extra) {
             $record['extra'] = $extra;
             return $record;
         });
-        return $log;
     }
 
     /**
